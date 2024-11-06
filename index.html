@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+<!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
     <header class="header" data-aos="fade-down">
         <div class="container">
             <h1>Harsimran Jeet Singh</h1>
@@ -53,46 +62,55 @@
     <section id="experience" data-aos="fade-up">
         <div class="container">
             <h2>Professional Experience</h2>
-            <div class="job">
+            <!-- Collapsible Job Entries -->
+            <div class="job" onmouseover="toggleDetails(this)" onmouseout="toggleDetails(this)">
                 <h3>Associate Scientist II, Manufacturing Sciences and Technology</h3>
-                <p>OmniaBio Inc, Hamilton, ON | April 2023 - Current</p>
-                <ul>
-                    <li>Led user development process for 300+ cell therapy and viral vector equipment.</li>
-                    <li>Reviewed technical specifications for equipment selection.</li>
-                    <li>Created layouts for new projects considering workflow and ergonomics.</li>
-                    <li>Supported CQV team in developing test specifications.</li>
-                </ul>
+                <p class="job-details">
+                    <strong>OmniaBio Inc, Hamilton, ON | April 2023 - Current</strong>
+                    <ul>
+                        <li>Led user development process for 300+ cell therapy and viral vector equipment.</li>
+                        <li>Reviewed technical specifications for equipment selection.</li>
+                        <li>Created layouts for new projects considering workflow and ergonomics.</li>
+                        <li>Supported CQV team in developing test specifications.</li>
+                    </ul>
+                </p>
             </div>
-            <div class="job">
+            <div class="job" onmouseover="toggleDetails(this)" onmouseout="toggleDetails(this)">
                 <h3>Specialist, Manufacturing Sciences and Technology</h3>
-                <p>Resilience Biotechnologies Inc, Mississauga, ON | Nov 2021 - April 2023</p>
-                <ul>
-                    <li>Planned and implemented scale-up and capacity enhancement for downstream processes, including generation of mass balance sheets, PFDs, and floor utilization plans.</li>
-                    <li>Selected equipment and raw materials considering project timelines and regulatory requirements (US FDA, EU, ASME).</li>
-                    <li>Coordinated readiness activities for GMP production, listing requirements and gathering inputs from various departments.</li>
-                    <li>Conducted process risk assessments using FMEA to ensure process safety and robustness.</li>
-                    <li>Led on-floor activities for various downstream processes, including Tangential flow filtration, Hollow fiber filtration, Chromatography, Sterile filtration, Viral filtration, and Formulation.</li>
-                    <li>Coordinated with clients weekly to provide project updates and improvement opportunities.</li>
-                </ul>
+                <p class="job-details">
+                    <strong>Resilience Biotechnologies Inc, Mississauga, ON | Nov 2021 - April 2023</strong>
+                    <ul>
+                        <li>Planned and implemented scale-up and capacity enhancement for downstream processes, including generation of mass balance sheets, PFDs, and floor utilization plans.</li>
+                        <li>Selected equipment and raw materials considering project timelines and regulatory requirements (US FDA, EU, ASME).</li>
+                        <li>Coordinated readiness activities for GMP production, listing requirements and gathering inputs from various departments.</li>
+                        <li>Conducted process risk assessments using FMEA to ensure process safety and robustness.</li>
+                        <li>Led on-floor activities for various downstream processes, including Tangential flow filtration, Hollow fiber filtration, Chromatography, Sterile filtration, Viral filtration, and Formulation.</li>
+                        <li>Coordinated with clients weekly to provide project updates and improvement opportunities.</li>
+                    </ul>
+                </p>
             </div>
-            <div class="job">
+            <div class="job" onmouseover="toggleDetails(this)" onmouseout="toggleDetails(this)">
                 <h3>Commissioning, Qualification, and Validation (CQV) Specialist</h3>
-                <p>Sanofi, Toronto, ON | July 2021 - Nov 2021</p>
-                <ul>
-                    <li>Authored and reviewed project documentation including Commissioning Test Plan, Requirement Traceability Matrix, and Commissioning Test Scripts for Installation Verification (IV), Start-up, and Shakedown (SUSD) and Operational Verification (OV).</li>
-                    <li>Worked directly with Quality Assurance to ensure CQV documentation was produced correctly and in a timely manner.</li>
-                    <li>Coordinated with departments to discuss required tests based on requirements in URS, FCCA, and risk assessments.</li>
-                </ul>
+                <p class="job-details">
+                    <strong>Sanofi, Toronto, ON | July 2021 - Nov 2021</strong>
+                    <ul>
+                        <li>Authored and reviewed project documentation including Commissioning Test Plan, Requirement Traceability Matrix, and Commissioning Test Scripts for Installation Verification (IV), Start-up, and Shakedown (SUSD) and Operational Verification (OV).</li>
+                        <li>Worked directly with Quality Assurance to ensure CQV documentation was produced correctly and in a timely manner.</li>
+                        <li>Coordinated with departments to discuss required tests based on requirements in URS, FCCA, and risk assessments.</li>
+                    </ul>
+                </p>                
             </div>
-            <div class="job">
+            <div class="job" onmouseover="toggleDetails(this)" onmouseout="toggleDetails(this)">
                 <h3>Process Engineer</h3>
-                <p>Ind-Swift Laboratories Ltd (US FDA approved), Dera Bassi, Punjab, India | Sept 2017 - Aug 2019</p>
-                <ul>
-                    <li>Led scale-up and validation of manufacturing processes for 10+ new API and CRAMS molecules, contributing over 5% of monthly sales.</li>
-                    <li>Managed all three phases of Equipment Validation: Pre-validation (URS, DQ, IQ), Process Validation (OQ, PQ, VQ), and Maintenance.</li>
-                    <li>Coordinated with production, quality control, and other departments to ensure compliance with regulatory standards (US FDA, EU, ICH, and ASTM) during validation and qualification activities.</li>
-                    <li>Conducted deviation investigations and root cause analysis to implement Corrective and Preventive Actions (CAPA).</li>
-                </ul>
+                <p class="job-details">
+                    <strong>Ind-Swift Laboratories Ltd (US FDA approved), Dera Bassi, Punjab, India | Sept 2017 - Aug 2019</strong>
+                    <ul>
+                        <li>Led scale-up and validation of manufacturing processes for 10+ new API and CRAMS molecules, contributing over 5% of monthly sales.</li>
+                        <li>Managed all three phases of Equipment Validation: Pre-validation (URS, DQ, IQ), Process Validation (OQ, PQ, VQ), and Maintenance.</li>
+                        <li>Coordinated with production, quality control, and other departments to ensure compliance with regulatory standards (US FDA, EU, ICH, and ASTM) during validation and qualification activities.</li>
+                        <li>Conducted deviation investigations and root cause analysis to implement Corrective and Preventive Actions (CAPA).</li>
+                    </ul>
+                </p>
             </div>
         </div>
     </section>
@@ -114,6 +132,9 @@
             easing: 'ease-in-out',
             once: true
         });
+        function toggleDetails(element) {
+            element.classList.toggle("expanded");
+        }
     </script>
 </body>
 </html>
