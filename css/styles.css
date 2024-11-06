@@ -127,3 +127,78 @@ header p, header a {
     font-size: 1.1em;
     color: #ddd;
 }
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background-color: #1e2a38;
+    transition: left 0.3s;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px 15px;
+    transition: background-color 0.2s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #007acc;
+}
+
+/* Experience Section */
+.job {
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.job h3 {
+    font-size: 1.5em;
+    color: #1e2a38;
+    margin-bottom: 5px;
+}
+
+.job .job-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    color: #555;
+}
+
+.job.expanded .job-details {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.job.expanded h3 {
+    color: #007acc;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
