@@ -11,33 +11,37 @@ body {
     color: #333;
     background-color: #f9f9f9;
     margin: 20px;
+    scroll-behavior: smooth;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #333;
+    margin-bottom: 5px;
 }
 
 header p, header a {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #555;
 }
 
 section {
-    margin: 20px 0;
-    padding: 15px;
+    margin: 40px 0;
+    padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #444;
     border-bottom: 2px solid #ddd;
     padding-bottom: 5px;
@@ -51,6 +55,7 @@ ul {
 
 ul li {
     margin: 5px 0;
+    font-size: 1.05em;
 }
 
 a {
@@ -63,13 +68,15 @@ a:hover {
 }
 
 article h3 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #333;
+    margin-top: 10px;
 }
 
 article p {
-    font-size: 0.9em;
+    font-size: 1em;
     color: #666;
+    margin-bottom: 10px;
 }
 
 article ul {
