@@ -175,30 +175,42 @@ header p, header a {
     margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
 }
 
-.job h3 {
-    font-size: 1.5em;
+.job:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #e6f2ff;
+}
+
+/* Job Header always visible */
+.job-header h3 {
+    font-size: 1.3em;
     color: #1e2a38;
     margin-bottom: 5px;
 }
 
-.job .job-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-    color: #555;
-}
-
-.job.expanded .job-details {
-    max-height: 500px;
-    opacity: 1;
-}
-
-.job.expanded h3 {
+.job-header p {
+    font-size: 1em;
     color: #007acc;
     font-weight: bold;
-    transition: color 0.3s ease;
+}
+
+/* Job Details are hidden by default */
+.job-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    padding-top: 10px;
+}
+
+/* Expand job details on hover */
+.job:hover .job-details {
+    max-height: 500px; /* Set to a large enough value to show all details */
+    opacity: 1;
 }
 
