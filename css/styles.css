@@ -131,18 +131,18 @@ header p, header a {
 /* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    left: -150px;
+    left: -160px; /* Hide it off-screen */
     top: 0;
     height: 100%;
-    width: 150px;
+    width: 160px;
     background-color: #1e2a38;
-    transition: left 0.3s;
+    transition: left 0.3s ease;
     padding-top: 20px;
-    z-index: 1000;
+    z-index: 1000; /* Ensure it appears above other elements */
 }
 
 .sidebar:hover {
-    left: 0;
+    left: 0; /* Slide it in on hover */
 }
 
 .sidebar ul {
