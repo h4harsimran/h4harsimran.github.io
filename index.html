@@ -3,52 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsimran Jeet Singh - Resume</title>
+    <title>Harsimran Jeet Singh - Professional Resume</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header data-aos="fade-down">
-        <h1>Harsimran Jeet Singh</h1>
-        <p>Hamilton, ON | <a href="mailto:harsimranjeetsingh4@gmail.com">harsimranjeetsingh4@gmail.com</a> | 587-937-3631</p>
-        <p><a href="https://www.linkedin.com/in/hs10" target="_blank">LinkedIn Profile</a></p>
+    <header class="header" data-aos="fade-down">
+        <div class="container">
+            <h1>Harsimran Jeet Singh</h1>
+            <p>Hamilton, ON | <a href="mailto:harsimranjeetsingh4@gmail.com">harsimranjeetsingh4@gmail.com</a> | 587-937-3631</p>
+            <p><a href="https://www.linkedin.com/in/hs10" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
+        </div>
     </header>
-    
+
+    <div class="divider"></div>
+
     <section id="summary" data-aos="fade-up">
-        <h2>Summary</h2>
-        <p>Skilled in Scale-up, Technology transfer, Process engineering, Risk assessment, Commissioning, and qualification...</p>
-    </section>
-    
-    <section id="skills" data-aos="fade-up">
-        <h2>Skills</h2>
-        <ul>
-            <li>MS Excel, Word, PowerPoint</li>
-            <li>Lucid, Visio, Veeva, Field wire, Track wise</li>
-            <li>Process Design, Scale-up & Tech transfer</li>
-            <!-- Add other skills here -->
-        </ul>
-    </section>
-    
-    <section id="experience" data-aos="fade-up">
-        <h2>Professional Experience</h2>
-        <article>
-            <h3>Associate Scientist II, Manufacturing Sciences and Technology</h3>
-            <p>OmniaBio Inc, Hamilton, ON - April 2023 - Current</p>
-            <ul>
-                <li>Led the User development process of the whole facility with over 300 cell therapy and viral vector equipment...</li>
-                <!-- Add other responsibilities here -->
-            </ul>
-        </article>
-        <!-- Add more experience sections -->
-    </section>
-    
-    <section id="education" data-aos="fade-up">
-        <h2>Education and Training</h2>
-        <p><strong>Master of Engineering - MEng</strong>, Chemical Engineering (Process Control), University of Alberta...</p>
-        <p><strong>Bachelor of Engineering - BE</strong>, Chemical Engineering, Panjab University...</p>
+        <div class="container">
+            <h2>Summary</h2>
+            <p>Skilled in Scale-up, Technology transfer, Process engineering, Risk assessment, Commissioning, and qualification with prior experience in the pharma and bio-pharma industry. Experienced in Tangential flow filtration, chromatography, sterile filtration, viral filtrations, formulation, and more.</p>
+        </div>
     </section>
 
-    <script src="js/aos.js"></script>
+    <div class="divider"></div>
+
+    <section id="skills" data-aos="fade-up">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <span>MS Excel, Word, PowerPoint</span>
+                <span>Lucid, Visio, Veeva</span>
+                <span>Field wire, Track wise</span>
+                <span>Process Design, Scale-up & Tech Transfer</span>
+                <span>Qualification & Validation</span>
+                <span>Continuous Improvement</span>
+                <span>FMEA Risk Assessment</span>
+                <span>Equipment & Material Selection</span>
+                <span>Cleaning Validation</span>
+                <span>Statistical Process Control</span>
+                <span>Project Management</span>
+                <span>HAZOP Study</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="experience" data-aos="fade-up">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="job">
+                <h3>Associate Scientist II, Manufacturing Sciences and Technology</h3>
+                <p>OmniaBio Inc, Hamilton, ON | April 2023 - Current</p>
+                <ul>
+                    <li>Led user development process for 300+ cell therapy and viral vector equipment.</li>
+                    <li>Reviewed technical specifications for equipment selection.</li>
+                    <li>Created layouts for new projects considering workflow and ergonomics.</li>
+                    <li>Supported CQV team in developing test specifications.</li>
+                </ul>
+            </div>
+            <!-- Add other experiences similarly -->
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="education" data-aos="fade-up">
+        <div class="container">
+            <h2>Education & Training</h2>
+            <p><strong>Master of Engineering - MEng</strong>, Chemical Engineering (Process Control)<br>University of Alberta, Edmonton, AB | Sept 2019 - April 2021 | GPA: 3.94</p>
+            <p><strong>Bachelor of Engineering - BE</strong>, Chemical Engineering<br>Panjab University, Chandigarh, India | Aug 2012 - May 2016 | GPA: 3.52</p>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         AOS.init({
             duration: 800,
