@@ -1,21 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { contactInfo } from '../../data/personal';
 import DNAHelix from '../ui/DNAHelix';
-import ParticleSystem from '../ui/ParticleSystem';
-import ExpertiseNodes from '../ui/ExpertiseNodes';
 import { useSectionFocus } from '../../hooks/useFocusManagement';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 import { createAriaAttributes, srOnlyClass } from '../../utils/accessibility';
 
 const Hero: React.FC = () => {
-  const [nodePositions, setNodePositions] = useState<
-    Array<{ x: number; y: number }>
-  >([]);
   const heroRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const contactRef = useRef<HTMLParagraphElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
   const prefersReducedMotion = useReducedMotion();
   const { sectionRef } = useSectionFocus();
 
@@ -24,7 +20,8 @@ const Hero: React.FC = () => {
       !heroRef.current ||
       !titleRef.current ||
       !subtitleRef.current ||
-      !contactRef.current
+      !contactRef.current ||
+      !imageRef.current
     )
       return;
     if (prefersReducedMotion) return;
@@ -33,8 +30,26 @@ const Hero: React.FC = () => {
     const titleElement = titleRef.current;
     const subtitleElement = subtitleRef.current;
     const contactElement = contactRef.current;
+    const imageElement = imageRef.current;
 
     const tl = gsap.timeline();
+
+    // Animate portrait image entrance
+    tl.fromTo(
+      imageElement,
+      {
+        scale: 0.8,
+        opacity: 0,
+        y: 30,
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: 'power3.out',
+      }
+    );
 
     // Animate title entrance
     tl.fromTo(
@@ -50,7 +65,8 @@ const Hero: React.FC = () => {
         scale: 1,
         duration: 1,
         ease: 'power3.out',
-      }
+      },
+      '-=0.8'
     );
 
     // Animate subtitle
@@ -85,26 +101,35 @@ const Hero: React.FC = () => {
       '-=0.3'
     );
 
-    // Add subtle floating animation to title
-    gsap.to(titleElement, {
-      y: -5,
-      duration: 3,
+    // Add subtle floating animation to portrait
+    gsap.to(imageElement, {
+      y: -8,
+      duration: 4,
       ease: 'sine.inOut',
       repeat: -1,
       yoyo: true,
     });
 
+    // Add subtle floating animation to title
+    gsap.to(titleElement, {
+      y: -3,
+      duration: 3,
+      ease: 'sine.inOut',
+      repeat: -1,
+      yoyo: true,
+      delay: 0.5,
+    });
+
     return () => {
       tl.kill();
-      gsap.killTweensOf([titleElement, subtitleElement, contactElement]);
+      gsap.killTweensOf([
+        titleElement,
+        subtitleElement,
+        contactElement,
+        imageElement,
+      ]);
     };
   }, [prefersReducedMotion]);
-
-  const handleNodePositionsChange = (
-    positions: Array<{ x: number; y: number }>
-  ) => {
-    setNodePositions(positions);
-  };
 
   return (
     <section
@@ -121,78 +146,51 @@ const Hero: React.FC = () => {
       })}
       tabIndex={-1}
     >
-      {/* Video Background */}
-      <div className="hero-video-container">
-        <video
-          className="hero-video absolute inset-0 z-0 h-full w-full"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
-        >
-          <source src="/images/244736.mp4" type="video/mp4" />
-          {/* Fallback for browsers that don't support video */}
-        </video>
+      {/* Gradient Background - Using proper biotech colors */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-800 via-blue-700 to-blue-800" />
 
-        {/* Fallback gradient background */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900" />
-      </div>
-
-      {/* Video Overlay for Better Text Readability */}
-      <div className="video-overlay absolute inset-0 z-1" />
-      <div className="absolute inset-0 z-2 bg-black/10" />
+      {/* Overlay for depth */}
+      <div className="absolute inset-0 z-1 bg-gradient-to-t from-blue-800/60 via-transparent to-blue-800/40" />
 
       {/* DNA Helix Background */}
-      <div className="relative z-3">
+      <div className="absolute inset-0 z-2 opacity-30">
         <DNAHelix />
-      </div>
-
-      {/* Particle System */}
-      <div className="relative z-4">
-        <ParticleSystem nodePositions={nodePositions} className="z-5" />
-      </div>
-
-      {/* Expertise Nodes */}
-      <div className="relative z-5">
-        <ExpertiseNodes onNodePositionsChange={handleNodePositionsChange} />
       </div>
 
       {/* Scientific Icons Background */}
       <div
-        className="pointer-events-none absolute inset-0 z-6"
+        className="pointer-events-none absolute inset-0 z-3"
         aria-hidden="true"
       >
-        <div className="animate-bounce-gentle absolute top-20 left-10 text-4xl opacity-30">
+        <div className="animate-bounce-gentle absolute top-20 left-10 text-4xl opacity-20">
           ⚗️
         </div>
         <div
-          className="animate-bounce-gentle absolute top-32 right-16 text-3xl opacity-25"
+          className="animate-bounce-gentle absolute top-32 right-16 text-3xl opacity-15"
           style={{ animationDelay: '0.5s' }}
         >
           🧬
         </div>
         <div
-          className="animate-bounce-gentle absolute bottom-40 left-20 text-5xl opacity-20"
+          className="animate-bounce-gentle absolute bottom-40 left-20 text-5xl opacity-10"
           style={{ animationDelay: '1s' }}
         >
           🔬
         </div>
         <div
-          className="animate-bounce-gentle absolute right-10 bottom-20 text-3xl opacity-30"
+          className="animate-bounce-gentle absolute right-10 bottom-20 text-3xl opacity-20"
           style={{ animationDelay: '1.5s' }}
         >
           🧪
         </div>
         <div
-          className="animate-bounce-gentle absolute top-1/2 left-5 text-2xl opacity-25"
+          className="animate-bounce-gentle absolute top-1/2 left-5 text-2xl opacity-15"
           style={{ animationDelay: '2s' }}
         >
           ⚛️
         </div>
         <div
-          className="animate-bounce-gentle absolute top-1/3 right-5 text-4xl opacity-20"
+          className="animate-bounce-gentle absolute top-1/3 right-5 text-4xl opacity-10"
           style={{ animationDelay: '2.5s' }}
         >
           🧫
@@ -200,69 +198,132 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 mx-auto max-w-6xl px-4 text-center">
-        {/* Text Background for Better Readability */}
-        <div className="hero-content-box rounded-3xl p-8 md:p-12">
-          <h1
-            ref={titleRef}
-            className="mb-4 bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-3xl font-bold text-transparent drop-shadow-lg will-change-transform md:text-5xl lg:text-6xl"
-          >
-            HARSIMRANJEET SINGH
-            <span className={srOnlyClass}>
-              - Manufacturing Sciences and Technology Leader specializing in
-              CAR-T manufacturing, scale-up, and technology transfer
-            </span>
-          </h1>
-
-          <p
-            ref={subtitleRef}
-            className="mb-8 text-xl font-medium tracking-wide text-cyan-300 drop-shadow-md will-change-transform md:text-2xl lg:text-3xl"
-          >
-            Manufacturing Sciences & Technology Leader
-          </p>
-
-          <p
-            ref={contactRef}
-            className="mb-12 flex flex-col items-center justify-center gap-2 text-lg text-blue-200 drop-shadow-md will-change-transform sm:flex-row sm:gap-8 md:text-xl"
-          >
-            <span className="flex items-center gap-2">
-              <span aria-hidden="true">📍</span>
-              <span>Located in {contactInfo.location}</span>
-            </span>
-            <span className="hidden text-blue-400 sm:inline" aria-hidden="true">
-              |
-            </span>
-            <span className="flex items-center gap-2">
-              <span aria-hidden="true">✉️</span>
-              <span>Contact: {contactInfo.email}</span>
-            </span>
-          </p>
-
-          {/* Specialization Tags */}
+      <div className="relative z-10 mx-auto max-w-6xl px-4">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          {/* Portrait Section */}
           <div
-            className="mt-8 flex flex-wrap justify-center gap-3"
-            role="list"
-            aria-label="Areas of expertise"
+            ref={imageRef}
+            className="order-1 flex justify-center lg:order-1 lg:justify-end"
           >
-            {[
-              'CAR-T Manufacturing',
-              'Scale-up Expert',
-              'Tech Transfer',
-              'Process Engineering',
-            ].map((tag, index) => (
-              <span
-                key={tag}
-                role="listitem"
-                className="animate-fade-in rounded-full border border-cyan-400/40 bg-blue-800/60 px-4 py-2 text-sm font-medium text-cyan-200 shadow-lg backdrop-blur-sm"
-                style={{
-                  animationDelay: prefersReducedMotion
-                    ? '0s'
-                    : `${2 + index * 0.1}s`,
-                }}
-              >
-                {tag}
+            <div className="relative h-64 w-64 md:h-80 md:w-80">
+              {/* Main portrait image */}
+              <img
+                src="/images/IMG_4190.JPG"
+                alt="Harsimranjeet Singh - Manufacturing Sciences & Technology Leader"
+                className="h-full w-full rounded-full border-4 border-cyan-500/50 object-cover shadow-2xl"
+              />
+
+              {/* Glowing ring effect */}
+              <div className="absolute inset-0 animate-pulse rounded-full border-2 border-cyan-400 opacity-60"></div>
+              <div
+                className="absolute inset-0 animate-pulse rounded-full border border-blue-400 opacity-40"
+                style={{ animationDelay: '0.5s' }}
+              ></div>
+
+              {/* Floating particles around portrait */}
+              <div className="absolute -top-4 -right-4 h-3 w-3 animate-ping rounded-full bg-cyan-500 opacity-75"></div>
+              <div
+                className="absolute -bottom-6 -left-6 h-2 w-2 animate-ping rounded-full bg-cyan-500 opacity-60"
+                style={{ animationDelay: '1s' }}
+              ></div>
+              <div
+                className="absolute top-1/2 -right-8 h-1.5 w-1.5 animate-ping rounded-full bg-cyan-500 opacity-50"
+                style={{ animationDelay: '2s' }}
+              ></div>
+            </div>
+          </div>
+
+          {/* Text Content */}
+          <div className="order-2 text-center lg:order-2 lg:text-left">
+            <h1
+              ref={titleRef}
+              className="mb-6 bg-gradient-to-r from-white via-cyan-400 to-white bg-clip-text text-4xl font-bold text-transparent drop-shadow-lg will-change-transform md:text-5xl lg:text-6xl"
+            >
+              HARSIMRANJEET SINGH
+              <span className={srOnlyClass}>
+                - Manufacturing Sciences and Technology Leader specializing in
+                CAR-T manufacturing, scale-up, and technology transfer
               </span>
-            ))}
+            </h1>
+
+            <p
+              ref={subtitleRef}
+              className="mb-8 text-xl font-medium tracking-wide text-cyan-400 drop-shadow-md will-change-transform md:text-2xl lg:text-3xl"
+            >
+              Manufacturing Sciences & Technology Leader
+            </p>
+
+            <div className="mb-8 space-y-2 text-lg text-slate-200">
+              <p className="flex items-center justify-center gap-2 lg:justify-start">
+                <span aria-hidden="true">🎯</span>
+                <span className="font-medium">
+                  CAR-T Manufacturing Specialist
+                </span>
+              </p>
+              <p className="flex items-center justify-center gap-2 lg:justify-start">
+                <span aria-hidden="true">⚡</span>
+                <span className="font-medium">
+                  Scale-up & Tech Transfer Expert
+                </span>
+              </p>
+            </div>
+
+            <p
+              ref={contactRef}
+              className="mb-12 flex flex-col items-center justify-center gap-2 text-lg text-slate-300 drop-shadow-md will-change-transform sm:flex-row sm:gap-8 md:text-xl lg:items-start lg:justify-start"
+            >
+              <span className="flex items-center gap-2">
+                <span aria-hidden="true">📍</span>
+                <span>Located in {contactInfo.location}</span>
+              </span>
+              <span
+                className="hidden text-cyan-400 sm:inline"
+                aria-hidden="true"
+              >
+                |
+              </span>
+              <span className="flex items-center gap-2">
+                <span aria-hidden="true">✉️</span>
+                <span>Contact: {contactInfo.email}</span>
+              </span>
+            </p>
+
+            {/* Specialization Tags */}
+            <div
+              className="flex flex-wrap justify-center gap-3 lg:justify-start"
+              role="list"
+              aria-label="Areas of expertise"
+            >
+              {[
+                'Process Engineering',
+                'Risk Assessment',
+                'Technology Transfer',
+                'Equipment Validation',
+              ].map((tag, index) => (
+                <span
+                  key={tag}
+                  role="listitem"
+                  className="animate-fade-in rounded-full border border-cyan-400/40 bg-blue-800/60 px-4 py-2 text-sm font-medium text-cyan-400 shadow-lg backdrop-blur-sm transition-colors duration-300 hover:bg-blue-800/80"
+                  style={{
+                    animationDelay: prefersReducedMotion
+                      ? '0s'
+                      : `${2 + index * 0.1}s`,
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Call to Action */}
+            <div className="mt-8">
+              <p className="font-medium text-cyan-400 italic">
+                "Designed & Engineered with Precision"
+              </p>
+              <p className="mt-1 text-sm text-slate-300">
+                Like the processes I optimize daily
+              </p>
+            </div>
           </div>
         </div>
       </div>

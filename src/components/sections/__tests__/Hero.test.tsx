@@ -21,28 +21,6 @@ vi.mock('../../ui/DNAHelix', () => ({
   default: () => <div data-testid="dna-helix">DNA Helix</div>,
 }));
 
-vi.mock('../../ui/ParticleSystem', () => ({
-  default: () => <div data-testid="particle-system">Particle System</div>,
-}));
-
-vi.mock('../../ui/ExpertiseNodes', () => ({
-  default: ({
-    onNodePositionsChange,
-  }: {
-    onNodePositionsChange: (positions: Array<{ x: number; y: number }>) => void;
-  }) => {
-    // Simulate node positions update immediately
-    setTimeout(() => {
-      onNodePositionsChange([
-        { x: 100, y: 100 },
-        { x: 200, y: 200 },
-      ]);
-    }, 0);
-
-    return <div data-testid="expertise-nodes">Expertise Nodes</div>;
-  },
-}));
-
 // Mock contact info
 vi.mock('../../../data/personal', () => ({
   contactInfo: {
@@ -68,33 +46,30 @@ describe('Hero', () => {
     ).toBeInTheDocument();
 
     // Check for contact information
-    expect(screen.getByText('Hamilton, ON')).toBeInTheDocument();
+    expect(screen.getByText(/Hamilton, ON/)).toBeInTheDocument();
     expect(
-      screen.getByText('harsimranjeetsingh4@gmail.com')
+      screen.getByText(/harsimranjeetsingh4@gmail.com/)
     ).toBeInTheDocument();
+
+    // Check for portrait image
+    expect(screen.getByAltText(/Harsimranjeet Singh/)).toBeInTheDocument();
   });
 
-  it('renders all animation components', () => {
+  it('renders DNA Helix animation component', () => {
     render(<Hero />);
 
     // Check for DNA Helix component
     expect(screen.getByTestId('dna-helix')).toBeInTheDocument();
-
-    // Check for Particle System component
-    expect(screen.getByTestId('particle-system')).toBeInTheDocument();
-
-    // Check for Expertise Nodes component
-    expect(screen.getByTestId('expertise-nodes')).toBeInTheDocument();
   });
 
   it('renders specialization tags', () => {
     render(<Hero />);
 
     // Check for specialization tags
-    expect(screen.getByText('CAR-T Manufacturing')).toBeInTheDocument();
-    expect(screen.getByText('Scale-up Expert')).toBeInTheDocument();
-    expect(screen.getByText('Tech Transfer')).toBeInTheDocument();
     expect(screen.getByText('Process Engineering')).toBeInTheDocument();
+    expect(screen.getByText('Risk Assessment')).toBeInTheDocument();
+    expect(screen.getByText('Technology Transfer')).toBeInTheDocument();
+    expect(screen.getByText('Equipment Validation')).toBeInTheDocument();
   });
 
   it('has proper section structure', () => {

@@ -396,53 +396,27 @@ body {
   transform: translateY(-2px);
 }
 
-/* Video Background Enhancements */
-.hero-video {
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.7) contrast(1.1) saturate(1.2);
+/* Hero Portrait Enhancements */
+.hero-portrait-glow {
+  box-shadow:
+    0 0 30px rgba(6, 182, 212, 0.3),
+    0 0 60px rgba(6, 182, 212, 0.2),
+    0 0 90px rgba(6, 182, 212, 0.1);
 }
 
-/* Ensure video covers the entire hero section */
-.hero-video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* Video overlay for better text contrast */
-.video-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(30, 58, 138, 0.6) 0%,
-    rgba(30, 64, 175, 0.4) 50%,
-    rgba(22, 78, 99, 0.6) 100%
-  );
-}
-
-/* Enhanced text readability on video background */
-.hero-content-box {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive video handling */
-@media (max-width: 768px) {
-  .hero-video {
-    object-position: center center;
+/* Smooth bounce animation for gentle movement */
+@keyframes bounce-gentle {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 
-/* Fallback for browsers that don't support backdrop-filter */
-@supports not (backdrop-filter: blur(10px)) {
-  .hero-content-box {
-    background: rgba(0, 0, 0, 0.6);
-  }
+.animate-bounce-gentle {
+  animation: bounce-gentle 6s ease-in-out infinite;
 }
 
 /* Career Timeline Enhancements */
