@@ -75,7 +75,7 @@ export const cleanupGSAPAnimations = (selector?: string) => {
  */
 export const createSafeScrollTrigger = (
   config: AnimationConfig,
-  scrollTriggerConfig: unknown
+  scrollTriggerConfig: ScrollTrigger.StaticVars
 ) => {
   try {
     // If reduced motion is preferred, disable scroll triggers

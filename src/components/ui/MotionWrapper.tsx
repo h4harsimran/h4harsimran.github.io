@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import type { MotionProps, Variants } from 'framer-motion';
 import { useAnimationConfig } from '../../hooks/useReducedMotion';
+import { accessibleVariants } from './MotionVariants';
 
 interface MotionWrapperProps
   extends Omit<MotionProps, 'variants' | 'initial' | 'animate' | 'exit'> {
@@ -43,31 +44,13 @@ export const MotionWrapper: React.FC<MotionWrapperProps> = ({
     );
   }
 
-  // Create reduced variants for accessibility
-  const accessibleVariants = variants
-    ? {
-        ...variants,
-        // Override durations to be shorter
-        ...Object.keys(variants).reduce((acc, key) => {
-          const variant = variants[key];
-          if (typeof variant === 'object' && variant.transition) {
-            acc[key] = {
-              ...variant,
-              transition: {
-                ...variant.transition,
-                duration: Math.min(variant.transition.duration || 0.3, 0.3),
-              },
-            };
-          }
-          return acc;
-        }, {} as Variants),
-      }
-    : undefined;
+  // Use provided variants or fallback to accessible variants
+  const finalVariants = variants || accessibleVariants.fadeIn;
 
   try {
     return (
       <motion.div
-        variants={variants || accessibleVariants.fadeIn}
+        variants={finalVariants}
         initial={initial}
         animate={animate}
         exit={exit}
@@ -91,8 +74,6 @@ export const MotionWrapper: React.FC<MotionWrapperProps> = ({
     );
   }
 };
-
-import { accessibleVariants } from './MotionVariants';
 
 /**
  * Accessible stagger container

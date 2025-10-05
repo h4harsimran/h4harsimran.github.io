@@ -1,5 +1,4 @@
 import { useEffect, useRef, useCallback } from 'react';
-import { gsap } from 'gsap';
 import { cleanupGSAPAnimations } from '../utils/animationHelpers';
 
 /**
@@ -7,17 +6,17 @@ import { cleanupGSAPAnimations } from '../utils/animationHelpers';
  * Automatically cleans up animations on component unmount
  */
 export const useGSAPCleanup = (selector?: string) => {
-  const animationsRef = useRef<gsap.core.Tween[]>([]);
-  const timelineRef = useRef<gsap.core.Timeline | null>(null);
+  const animationsRef = useRef<any[]>([]);
+  const timelineRef = useRef<any | null>(null);
 
   // Register animation for cleanup
-  const registerAnimation = (animation: gsap.core.Tween) => {
+  const registerAnimation = (animation: any) => {
     animationsRef.current.push(animation);
     return animation;
   };
 
   // Register timeline for cleanup
-  const registerTimeline = (timeline: gsap.core.Timeline) => {
+  const registerTimeline = (timeline: any) => {
     timelineRef.current = timeline;
     return timeline;
   };

@@ -195,7 +195,7 @@ export const getAccessibleAnimationProps = (prefersReducedMotion: boolean) => ({
  * Keyboard event handlers
  */
 export const handleKeyboardActivation = (
-  event: KeyboardEvent,
+  event: React.KeyboardEvent | KeyboardEvent,
   callback: () => void,
   keys: string[] = ['Enter', ' ']
 ) => {

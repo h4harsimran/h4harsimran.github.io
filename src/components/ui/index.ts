@@ -5,12 +5,8 @@ export {
   AnimationErrorBoundary,
   withAnimationErrorBoundary,
 } from './AnimationErrorBoundary';
-export {
-  MotionWrapper,
-  accessibleVariants,
-  StaggerContainer,
-  FadeIn,
-} from './MotionWrapper';
+export { MotionWrapper, StaggerContainer, FadeIn } from './MotionWrapper';
+export { accessibleVariants } from './MotionVariants';
 export { default as DNAHelix } from './DNAHelix';
 export { default as ParticleSystem } from './ParticleSystem';
 export { default as ExpertiseNodes } from './ExpertiseNodes';

@@ -9,12 +9,12 @@ export const useReducedMotion = (): boolean => {
 
   useEffect(() => {
     // Check if window is available (SSR safety)
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !window.matchMedia) return;
 
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     // Set initial value
-    setPrefersReducedMotion(mediaQuery.matches);
+    setPrefersReducedMotion(mediaQuery?.matches || false);
 
     // Listen for changes
     const handleChange = (event: MediaQueryListEvent) => {

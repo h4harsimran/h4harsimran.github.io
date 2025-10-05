@@ -28,11 +28,11 @@ export class AnimationErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     // Log the error for debugging
-    console.warn('Animation component error:', error, errorInfo);
+    console.warn('Animation component error:', _error, _errorInfo);
 
     // Call optional error handler
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(_error, _errorInfo);
     }
   }
 
