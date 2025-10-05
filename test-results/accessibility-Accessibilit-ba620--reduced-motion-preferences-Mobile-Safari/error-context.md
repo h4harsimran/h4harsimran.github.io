@@ -1,0 +1,96 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+    - banner [ref=e4]:
+        - generic [ref=e6]:
+            - button "HARSIMRANJEET SINGH MANUFACTURING SCIENCES & TECHNOLOGY LEADER" [ref=e8]:
+                - generic [ref=e9]:
+                    - generic [ref=e10]: HARSIMRANJEET SINGH
+                    - generic [ref=e11]: MANUFACTURING SCIENCES & TECHNOLOGY LEADER
+            - button "Toggle navigation menu" [ref=e12]:
+                - img [ref=e14]
+    - main [ref=e16]:
+        - generic [ref=e18]:
+            - heading "HARSIMRANJEET SINGH" [level=1] [ref=e19]
+            - paragraph [ref=e20]: Manufacturing Sciences & Technology Leader
+            - paragraph [ref=e21]:
+                - generic [ref=e22]: 📍 Hamilton, ON
+                - generic [ref=e23]: ✉️ harsimranjeetsingh4@gmail.com
+        - generic [ref=e28]:
+            - generic [ref=e29]:
+                - heading "Impact by the Numbers" [level=2] [ref=e30]:
+                    - text: Impact by the
+                    - generic [ref=e31]: Numbers
+                - paragraph [ref=e32]: Quantifiable achievements in manufacturing sciences and technology leadership
+            - generic [ref=e33]:
+                - generic [ref=e37]:
+                    - generic [ref=e39]: '0'
+                    - heading "Equipment Validated" [level=3] [ref=e40]
+                    - paragraph [ref=e41]: Commissioned & qualified across multiple facilities
+                - generic [ref=e46]:
+                    - generic [ref=e48]: '0'
+                    - heading "Projects Led" [level=3] [ref=e49]
+                    - paragraph [ref=e50]: Successfully delivered from concept to completion
+                - generic [ref=e55]:
+                    - generic [ref=e57]: '0'
+                    - heading "Years Experience" [level=3] [ref=e58]
+                    - paragraph [ref=e59]: In biotech/pharma manufacturing sciences
+                - generic [ref=e64]:
+                    - generic [ref=e66]: '0'
+                    - heading "Masters GPA" [level=3] [ref=e67]
+                    - paragraph [ref=e68]: MEng Chemical Engineering, University of Alberta
+            - generic [ref=e73]: PRECISION IN EVERY PROJECT
+    - contentinfo [ref=e91]:
+        - generic [ref=e96]:
+            - generic [ref=e97]:
+                - generic [ref=e98]:
+                    - generic [ref=e99]:
+                        - heading "Harsimranjeet Singh" [level=3] [ref=e100]
+                        - paragraph [ref=e101]: Manufacturing Sciences & Technology Leader
+                        - paragraph [ref=e102]: Specializing in CAR-T manufacturing, scale-up, and technology transfer with 8+ years of biotech/biopharma experience. Expert in process optimization, regulatory compliance, and leading cross-functional teams to deliver precision-engineered solutions.
+                    - generic [ref=e103]:
+                        - heading "Quick Links" [level=4] [ref=e104]
+                        - navigation [ref=e105]:
+                            - button "Hero" [ref=e106]
+                            - button "Impact Metrics" [ref=e107]
+                            - button "Career Timeline" [ref=e108]
+                            - button "Expertise Matrix" [ref=e109]
+                            - button "Process Flow" [ref=e110]
+                            - button "Skills Radar" [ref=e111]
+                            - button "Current Focus" [ref=e112]
+                            - button "Education" [ref=e113]
+                            - button "Tools" [ref=e114]
+                            - button "Contact" [ref=e115]
+                    - generic [ref=e116]:
+                        - heading "Get In Touch" [level=4] [ref=e117]
+                        - generic [ref=e118]:
+                            - link "harsimranjeetsingh4@gmail.com" [ref=e119]:
+                                - /url: mailto:harsimranjeetsingh4@gmail.com
+                                - img [ref=e120]
+                                - generic [ref=e122]: harsimranjeetsingh4@gmail.com
+                            - link "5879373631" [ref=e123]:
+                                - /url: tel:5879373631
+                                - img [ref=e124]
+                                - generic [ref=e126]: '5879373631'
+                            - generic [ref=e127]:
+                                - img [ref=e128]
+                                - generic [ref=e130]: Hamilton, ON
+                - generic [ref=e132]:
+                    - generic [ref=e133]:
+                        - link "Connect on LinkedIn" [ref=e134]:
+                            - /url: http://www.linkedin.com/in/hs10
+                            - img [ref=e135]
+                        - link "Send Email" [ref=e137]:
+                            - /url: mailto:harsimranjeetsingh4@gmail.com
+                            - img [ref=e138]
+                        - link "Call Phone" [ref=e140]:
+                            - /url: tel:5879373631
+                            - img [ref=e141]
+                    - button "Back to top" [ref=e143]:
+                        - generic [ref=e144]: Back to Top
+                        - img [ref=e145]
+            - generic [ref=e149]:
+                - paragraph [ref=e150]: © 2025 Harsimranjeet Singh. All rights reserved.
+                - paragraph [ref=e151]: DESIGNED & ENGINEERED WITH PRECISION
+```

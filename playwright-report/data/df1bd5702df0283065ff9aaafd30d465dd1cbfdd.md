@@ -1,0 +1,561 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+    - banner [ref=e4]:
+        - generic [ref=e6]:
+            - button "HARSIMRANJEET SINGH MANUFACTURING SCIENCES & TECHNOLOGY LEADER" [ref=e8]:
+                - generic [ref=e9]:
+                    - generic [ref=e10]: HARSIMRANJEET SINGH
+                    - generic [ref=e11]: MANUFACTURING SCIENCES & TECHNOLOGY LEADER
+            - button "Toggle navigation menu" [ref=e12]:
+                - img [ref=e14]
+    - main [ref=e16]:
+        - generic [ref=e18]:
+            - heading "HARSIMRANJEET SINGH" [level=1] [ref=e19]
+            - paragraph [ref=e20]: Manufacturing Sciences & Technology Leader
+            - paragraph [ref=e21]:
+                - generic [ref=e22]: 📍 Hamilton, ON
+                - generic [ref=e23]: ✉️ harsimranjeetsingh4@gmail.com
+        - generic [ref=e28]:
+            - generic [ref=e29]:
+                - heading "Impact by the Numbers" [level=2] [ref=e30]:
+                    - text: Impact by the
+                    - generic [ref=e31]: Numbers
+                - paragraph [ref=e32]: Quantifiable achievements in manufacturing sciences and technology leadership
+            - generic [ref=e33]:
+                - generic [ref=e37]:
+                    - generic [ref=e39]: 300+
+                    - heading "Equipment Validated" [level=3] [ref=e40]
+                    - paragraph [ref=e41]: Commissioned & qualified across multiple facilities
+                - generic [ref=e46]:
+                    - generic [ref=e48]: 10+
+                    - heading "Projects Led" [level=3] [ref=e49]
+                    - paragraph [ref=e50]: Successfully delivered from concept to completion
+                - generic [ref=e55]:
+                    - generic [ref=e57]: '8'
+                    - heading "Years Experience" [level=3] [ref=e58]
+                    - paragraph [ref=e59]: In biotech/pharma manufacturing sciences
+                - generic [ref=e64]:
+                    - generic [ref=e66]: '3.94'
+                    - heading "Masters GPA" [level=3] [ref=e67]
+                    - paragraph [ref=e68]: MEng Chemical Engineering, University of Alberta
+            - generic [ref=e73]: PRECISION IN EVERY PROJECT
+        - generic [ref=e76]:
+            - generic [ref=e77]:
+                - heading "Career Timeline" [level=2] [ref=e78]
+                - paragraph [ref=e79]: 'Professional journey from India to Canada: Building expertise in biotech manufacturing and process engineering'
+            - generic [ref=e80]:
+                - generic [ref=e81]:
+                    - img [ref=e82]
+                    - generic [ref=e84]: India
+                - generic [ref=e87]:
+                    - img [ref=e88]
+                    - generic [ref=e90]: Canada
+            - generic [ref=e93]:
+                - generic [ref=e94] [cursor=pointer]:
+                    - img [ref=e96] [cursor=pointer]
+                    - generic [ref=e100] [cursor=pointer]: '2017'
+                    - generic [ref=e101] [cursor=pointer]: India
+                    - generic [ref=e102] [cursor=pointer]:
+                        - heading "Process Engineer" [level=3] [ref=e103] [cursor=pointer]
+                        - paragraph [ref=e104] [cursor=pointer]: Ind-Swift Laboratories
+                        - paragraph [ref=e105] [cursor=pointer]: 2016 - 2019
+                        - paragraph [ref=e106] [cursor=pointer]: Optimized manufacturing processes for pharmaceutical products
+                        - generic [ref=e108] [cursor=pointer]:
+                            - generic [ref=e109] [cursor=pointer]: '8'
+                            - generic [ref=e110] [cursor=pointer]: initiatives
+                - generic [ref=e111] [cursor=pointer]:
+                    - img [ref=e113] [cursor=pointer]
+                    - generic [ref=e117] [cursor=pointer]: '2019'
+                    - generic [ref=e118] [cursor=pointer]: Canada
+                    - generic [ref=e119] [cursor=pointer]:
+                        - heading "MEng Chemical Engineering (Process Control)" [level=3] [ref=e120] [cursor=pointer]
+                        - paragraph [ref=e121] [cursor=pointer]: University of Alberta
+                        - paragraph [ref=e122] [cursor=pointer]: 2019 - 2021
+                        - paragraph [ref=e123] [cursor=pointer]: Achieved 3.94 GPA in Master of Engineering program
+                        - generic [ref=e125] [cursor=pointer]:
+                            - generic [ref=e126] [cursor=pointer]: '3.94'
+                            - generic [ref=e127] [cursor=pointer]: /4.0
+                - generic [ref=e128] [cursor=pointer]:
+                    - img [ref=e130] [cursor=pointer]
+                    - generic [ref=e134] [cursor=pointer]: '2021'
+                    - generic [ref=e135] [cursor=pointer]: Canada
+                    - generic [ref=e136] [cursor=pointer]:
+                        - heading "CQV Specialist" [level=3] [ref=e137] [cursor=pointer]
+                        - paragraph [ref=e138] [cursor=pointer]: Sanofi
+                        - paragraph [ref=e139] [cursor=pointer]: 2020 - 2021
+                        - paragraph [ref=e140] [cursor=pointer]: Commissioned new pharmaceutical manufacturing facility
+                        - generic [ref=e142] [cursor=pointer]:
+                            - generic [ref=e143] [cursor=pointer]: '50'
+                            - generic [ref=e144] [cursor=pointer]: pieces
+                - generic [ref=e145] [cursor=pointer]:
+                    - img [ref=e147] [cursor=pointer]
+                    - generic [ref=e151] [cursor=pointer]: '2023'
+                    - generic [ref=e152] [cursor=pointer]: Canada
+                    - generic [ref=e153] [cursor=pointer]:
+                        - heading "Specialist" [level=3] [ref=e154] [cursor=pointer]
+                        - paragraph [ref=e155] [cursor=pointer]: Resilience Biotechnologies
+                        - paragraph [ref=e156] [cursor=pointer]: 2021 - 2022
+                        - paragraph [ref=e157] [cursor=pointer]: Executed scale-up activities for 3 biopharmaceutical products
+                        - generic [ref=e159] [cursor=pointer]:
+                            - generic [ref=e160] [cursor=pointer]: '3'
+                            - generic [ref=e161] [cursor=pointer]: products
+                - generic [ref=e162] [cursor=pointer]:
+                    - img [ref=e164] [cursor=pointer]
+                    - generic [ref=e168] [cursor=pointer]: '2025'
+                    - generic [ref=e169] [cursor=pointer]: Canada
+                    - generic [ref=e170] [cursor=pointer]:
+                        - heading "Scientific Lead" [level=3] [ref=e171] [cursor=pointer]
+                        - paragraph [ref=e172] [cursor=pointer]: OmniaBio Inc
+                        - paragraph [ref=e173] [cursor=pointer]: 2024 - Present
+                        - paragraph [ref=e174] [cursor=pointer]: Leading CAR-T tech transfer for new manufacturing processes
+                        - generic [ref=e176] [cursor=pointer]:
+                            - generic [ref=e177] [cursor=pointer]: '3'
+                            - generic [ref=e178] [cursor=pointer]: active
+            - generic [ref=e180]:
+                - generic [ref=e181]:
+                    - generic [ref=e182]: 8+
+                    - generic [ref=e183]: Years Experience
+                - generic [ref=e184]:
+                    - generic [ref=e185]: '5'
+                    - generic [ref=e186]: Companies
+                - generic [ref=e187]:
+                    - generic [ref=e188]: '2'
+                    - generic [ref=e189]: Countries
+        - generic [ref=e191]:
+            - generic [ref=e192]:
+                - heading "Expertise Matrix" [level=2] [ref=e193]
+                - paragraph [ref=e194]: Three decades of specialized knowledge across technical implementation, regulatory compliance, and leadership excellence in biotech manufacturing
+            - generic [ref=e195]:
+                - generic [ref=e196]:
+                    - heading "Technical" [level=3] [ref=e198]
+                    - generic [ref=e200]:
+                        - generic [ref=e202] [cursor=pointer]:
+                            - generic [ref=e204] [cursor=pointer]:
+                                - img [ref=e205] [cursor=pointer]
+                                - generic [ref=e207] [cursor=pointer]: TFF
+                            - generic [ref=e209] [cursor=pointer]:
+                                - generic [ref=e210] [cursor=pointer]: 95%
+                                - generic [ref=e211] [cursor=pointer]: TFF (Tangential Flow Filtration)
+                        - generic [ref=e213] [cursor=pointer]:
+                            - generic [ref=e215] [cursor=pointer]:
+                                - img [ref=e216] [cursor=pointer]
+                                - generic [ref=e218] [cursor=pointer]: Chromatography
+                            - generic [ref=e220] [cursor=pointer]:
+                                - generic [ref=e221] [cursor=pointer]: 90%
+                                - generic [ref=e222] [cursor=pointer]: Chromatography
+                        - generic [ref=e224] [cursor=pointer]:
+                            - generic [ref=e226] [cursor=pointer]:
+                                - img [ref=e227] [cursor=pointer]
+                                - generic [ref=e229] [cursor=pointer]: Sterile
+                            - generic [ref=e231] [cursor=pointer]:
+                                - generic [ref=e232] [cursor=pointer]: 92%
+                                - generic [ref=e233] [cursor=pointer]: Sterile Filtration
+                        - generic [ref=e235] [cursor=pointer]:
+                            - generic [ref=e237] [cursor=pointer]:
+                                - img [ref=e238] [cursor=pointer]
+                                - generic [ref=e240] [cursor=pointer]: Viral
+                            - generic [ref=e242] [cursor=pointer]:
+                                - generic [ref=e243] [cursor=pointer]: 88%
+                                - generic [ref=e244] [cursor=pointer]: Viral Filtration
+                        - generic [ref=e246] [cursor=pointer]:
+                            - generic [ref=e248] [cursor=pointer]:
+                                - img [ref=e249] [cursor=pointer]
+                                - generic [ref=e251] [cursor=pointer]: Formulation
+                            - generic [ref=e253] [cursor=pointer]:
+                                - generic [ref=e254] [cursor=pointer]: 85%
+                                - generic [ref=e255] [cursor=pointer]: Formulation
+                        - generic [ref=e257] [cursor=pointer]:
+                            - generic [ref=e259] [cursor=pointer]:
+                                - img [ref=e260] [cursor=pointer]
+                                - generic [ref=e262] [cursor=pointer]: Reactors
+                            - generic [ref=e264] [cursor=pointer]:
+                                - generic [ref=e265] [cursor=pointer]: 87%
+                                - generic [ref=e266] [cursor=pointer]: Reactors
+                - generic [ref=e267]:
+                    - heading "Regulatory" [level=3] [ref=e269]
+                    - generic [ref=e271]:
+                        - generic [ref=e273] [cursor=pointer]:
+                            - generic [ref=e275] [cursor=pointer]:
+                                - img [ref=e276] [cursor=pointer]
+                                - generic [ref=e278] [cursor=pointer]: US
+                            - generic [ref=e280] [cursor=pointer]:
+                                - generic [ref=e281] [cursor=pointer]: 90%
+                                - generic [ref=e282] [cursor=pointer]: US FDA
+                        - generic [ref=e284] [cursor=pointer]:
+                            - generic [ref=e286] [cursor=pointer]:
+                                - img [ref=e287] [cursor=pointer]
+                                - generic [ref=e289] [cursor=pointer]: EU
+                            - generic [ref=e291] [cursor=pointer]:
+                                - generic [ref=e292] [cursor=pointer]: 88%
+                                - generic [ref=e293] [cursor=pointer]: EU GMP
+                        - generic [ref=e295] [cursor=pointer]:
+                            - generic [ref=e297] [cursor=pointer]:
+                                - img [ref=e298] [cursor=pointer]
+                                - generic [ref=e300] [cursor=pointer]: Health
+                            - generic [ref=e302] [cursor=pointer]:
+                                - generic [ref=e303] [cursor=pointer]: 92%
+                                - generic [ref=e304] [cursor=pointer]: Health Canada
+                        - generic [ref=e306] [cursor=pointer]:
+                            - generic [ref=e308] [cursor=pointer]:
+                                - img [ref=e309] [cursor=pointer]
+                                - generic [ref=e311] [cursor=pointer]: ASME
+                            - generic [ref=e313] [cursor=pointer]:
+                                - generic [ref=e314] [cursor=pointer]: 85%
+                                - generic [ref=e315] [cursor=pointer]: ASME
+                        - generic [ref=e317] [cursor=pointer]:
+                            - generic [ref=e319] [cursor=pointer]:
+                                - img [ref=e320] [cursor=pointer]
+                                - generic [ref=e322] [cursor=pointer]: ICH
+                            - generic [ref=e324] [cursor=pointer]:
+                                - generic [ref=e325] [cursor=pointer]: 87%
+                                - generic [ref=e326] [cursor=pointer]: ICH
+                        - generic [ref=e328] [cursor=pointer]:
+                            - generic [ref=e330] [cursor=pointer]:
+                                - img [ref=e331] [cursor=pointer]
+                                - generic [ref=e333] [cursor=pointer]: ASTM
+                            - generic [ref=e335] [cursor=pointer]:
+                                - generic [ref=e336] [cursor=pointer]: 83%
+                                - generic [ref=e337] [cursor=pointer]: ASTM
+                - generic [ref=e338]:
+                    - heading "Leadership" [level=3] [ref=e340]
+                    - generic [ref=e342]:
+                        - generic [ref=e344] [cursor=pointer]:
+                            - generic [ref=e346] [cursor=pointer]:
+                                - img [ref=e347] [cursor=pointer]
+                                - generic [ref=e349] [cursor=pointer]: Team
+                            - generic [ref=e351] [cursor=pointer]:
+                                - generic [ref=e352] [cursor=pointer]: 95%
+                                - generic [ref=e353] [cursor=pointer]: Team Lead 300+ Equipment
+                        - generic [ref=e355] [cursor=pointer]:
+                            - generic [ref=e357] [cursor=pointer]:
+                                - img [ref=e358] [cursor=pointer]
+                                - generic [ref=e360] [cursor=pointer]: 10+
+                            - generic [ref=e362] [cursor=pointer]:
+                                - generic [ref=e363] [cursor=pointer]: 88%
+                                - generic [ref=e364] [cursor=pointer]: 10+ Direct Reports
+                        - generic [ref=e366] [cursor=pointer]:
+                            - generic [ref=e368] [cursor=pointer]:
+                                - img [ref=e369] [cursor=pointer]
+                                - generic [ref=e371] [cursor=pointer]: Cross-functional
+                            - generic [ref=e373] [cursor=pointer]:
+                                - generic [ref=e374] [cursor=pointer]: 92%
+                                - generic [ref=e375] [cursor=pointer]: Cross-functional Coordination
+        - generic [ref=e378]:
+            - heading "Manufacturing Process Flow" [level=2] [ref=e379]
+            - paragraph [ref=e380]: End-to-end biotech manufacturing expertise from cell culture to final product release
+        - generic [ref=e383]:
+            - heading "Skills Radar" [level=2] [ref=e384]
+            - paragraph [ref=e385]: Comprehensive competency mapping across critical biotech manufacturing disciplines
+        - generic [ref=e387]:
+            - generic [ref=e388]:
+                - heading "Current Focus" [level=2] [ref=e389]
+                - paragraph [ref=e391]: Leading cutting-edge initiatives in CAR-T manufacturing, quality systems, and risk management
+            - generic [ref=e392]:
+                - generic [ref=e394]:
+                    - generic [ref=e397]:
+                        - generic [ref=e398]:
+                            - img [ref=e399]
+                            - heading "CAR-T Tech Transfer" [level=3] [ref=e401]
+                        - generic [ref=e402]: CAR-T Manufacturing
+                    - generic [ref=e405]:
+                        - paragraph [ref=e406]: Leading new manufacturing process implementation at OmniaBio for CAR-T cell therapy production. Overseeing technology transfer from development to commercial manufacturing scale.
+                        - generic [ref=e407]:
+                            - heading "Key Technologies" [level=4] [ref=e408]
+                            - generic [ref=e409]:
+                                - generic [ref=e410]: CAR-T Manufacturing
+                                - generic [ref=e411]: Technology Transfer
+                                - generic [ref=e412]: Process Scale-up
+                                - generic [ref=e413]: Cell Culture
+                                - generic [ref=e414]: +2 more
+                - generic [ref=e416]:
+                    - generic [ref=e419]:
+                        - generic [ref=e420]:
+                            - img [ref=e421]
+                            - heading "Chain of Identity" [level=3] [ref=e423]
+                        - generic [ref=e424]: Quality Systems
+                    - generic [ref=e427]:
+                        - paragraph [ref=e428]: Developed comprehensive Chain of Identity & Chain of Custody procedures for autologous therapies, ensuring patient safety and regulatory compliance throughout the manufacturing process.
+                        - generic [ref=e429]:
+                            - heading "Key Technologies" [level=4] [ref=e430]
+                            - generic [ref=e431]:
+                                - generic [ref=e432]: Chain of Identity
+                                - generic [ref=e433]: Chain of Custody
+                                - generic [ref=e434]: Autologous Therapies
+                                - generic [ref=e435]: Patient Safety
+                                - generic [ref=e436]: +2 more
+                - generic [ref=e438]:
+                    - generic [ref=e441]:
+                        - generic [ref=e442]:
+                            - img [ref=e443]
+                            - heading "Risk Assessment" [level=3] [ref=e445]
+                        - generic [ref=e446]: Risk Management
+                    - generic [ref=e449]:
+                        - paragraph [ref=e450]: Implementing comprehensive process & aseptic risk assessment using FMEA (Failure Mode and Effects Analysis) methodology to identify and mitigate manufacturing risks.
+                        - generic [ref=e451]:
+                            - heading "Key Technologies" [level=4] [ref=e452]
+                            - generic [ref=e453]:
+                                - generic [ref=e454]: FMEA
+                                - generic [ref=e455]: Risk Assessment
+                                - generic [ref=e456]: Process Risk Analysis
+                                - generic [ref=e457]: Aseptic Risk Assessment
+                                - generic [ref=e458]: +2 more
+            - generic [ref=e459]:
+                - paragraph [ref=e460]: Driving innovation in CAR-T manufacturing and biotechnology processes
+                - generic [ref=e461]:
+                    - img [ref=e462]
+                    - generic [ref=e464]: Engineering Precision in Every Process
+                    - img [ref=e465]
+        - generic [ref=e471]:
+            - generic [ref=e472]:
+                - heading "Education Journey" [level=2] [ref=e473]
+                - paragraph [ref=e475]: Academic excellence across two continents, building the foundation for engineering innovation
+            - generic [ref=e478]:
+                - generic [ref=e479]:
+                    - img [ref=e481]
+                    - generic [ref=e483]: Edmonton, AB
+                    - generic [ref=e484]: University of Alberta
+                - generic [ref=e485]:
+                    - img [ref=e487]
+                    - generic [ref=e489]: Chandigarh
+                    - generic [ref=e490]: Panjab University
+            - generic [ref=e491]:
+                - generic [ref=e493]:
+                    - img [ref=e497]
+                    - generic [ref=e499]:
+                        - generic [ref=e500]:
+                            - generic [ref=e502]: 🇨🇦
+                            - heading "Canada" [level=3] [ref=e503]
+                        - img [ref=e505]
+                    - generic [ref=e507]:
+                        - generic [ref=e508]:
+                            - heading "MEng Chemical Engineering (Process Control)" [level=4] [ref=e509]
+                            - generic [ref=e510]:
+                                - img [ref=e511]
+                                - generic [ref=e513]: University of Alberta
+                            - generic [ref=e514]:
+                                - img [ref=e515]
+                                - generic [ref=e517]: Edmonton, AB
+                        - generic [ref=e519]:
+                            - generic [ref=e520]: GPA
+                            - generic [ref=e521]:
+                                - img [ref=e522]
+                                - generic [ref=e524]: '3.94'
+                                - generic [ref=e525]: / 4
+                        - generic [ref=e527]: 2019 - 2021
+                        - generic [ref=e528]:
+                            - heading "Key Achievements" [level=5] [ref=e529]
+                            - list [ref=e530]:
+                                - listitem [ref=e531]:
+                                    - generic [ref=e533]: Graduated with 3.94 GPA
+                                - listitem [ref=e534]:
+                                    - generic [ref=e536]: Specialized in Process Control systems
+                                - listitem [ref=e537]:
+                                    - generic [ref=e539]: Conducted research in bioprocess optimization
+                - generic [ref=e541]:
+                    - img [ref=e545]
+                    - generic [ref=e547]:
+                        - generic [ref=e548]:
+                            - generic [ref=e550]: 🇮🇳
+                            - heading "India" [level=3] [ref=e551]
+                        - img [ref=e553]
+                    - generic [ref=e555]:
+                        - generic [ref=e556]:
+                            - heading "BEng Chemical Engineering" [level=4] [ref=e557]
+                            - generic [ref=e558]:
+                                - img [ref=e559]
+                                - generic [ref=e561]: Panjab University
+                            - generic [ref=e562]:
+                                - img [ref=e563]
+                                - generic [ref=e565]: Chandigarh
+                        - generic [ref=e567]:
+                            - generic [ref=e568]: GPA
+                            - generic [ref=e569]:
+                                - img [ref=e570]
+                                - generic [ref=e572]: '3.52'
+                                - generic [ref=e573]: / 4
+                        - generic [ref=e575]: 2012 - 2016
+                        - generic [ref=e576]:
+                            - heading "Key Achievements" [level=5] [ref=e577]
+                            - list [ref=e578]:
+                                - listitem [ref=e579]:
+                                    - generic [ref=e581]: Graduated with 3.52 GPA
+                                - listitem [ref=e582]:
+                                    - generic [ref=e584]: Strong foundation in chemical engineering principles
+                                - listitem [ref=e585]:
+                                    - generic [ref=e587]: Completed internships in pharmaceutical manufacturing
+            - generic [ref=e589]:
+                - heading "Academic Excellence Across Continents" [level=3] [ref=e590]
+                - paragraph [ref=e591]: From foundational engineering principles in India to advanced process control specialization in Canada, building the expertise that drives innovation in biotechnology manufacturing.
+        - generic [ref=e596]:
+            - generic [ref=e597]:
+                - heading "Tools & Technologies" [level=2] [ref=e598]
+                - paragraph [ref=e600]: Professional toolkit for engineering excellence and process optimization
+            - generic [ref=e601]:
+                - generic [ref=e602]:
+                    - generic [ref=e604]:
+                        - img [ref=e605]
+                        - heading "Office & Documentation" [level=3] [ref=e607]
+                    - generic [ref=e608]:
+                        - generic [ref=e612]:
+                            - img [ref=e614]
+                            - heading "Excel" [level=4] [ref=e616]
+                            - generic [ref=e618]:
+                                - generic [ref=e619]: Proficiency
+                                - generic [ref=e620]: 95%
+                        - generic [ref=e626]:
+                            - img [ref=e628]
+                            - heading "Visio" [level=4] [ref=e630]
+                            - generic [ref=e632]:
+                                - generic [ref=e633]: Proficiency
+                                - generic [ref=e634]: 88%
+                        - generic [ref=e640]:
+                            - img [ref=e642]
+                            - heading "Lucidchart" [level=4] [ref=e644]
+                            - generic [ref=e646]:
+                                - generic [ref=e647]: Proficiency
+                                - generic [ref=e648]: 82%
+                - generic [ref=e651]:
+                    - generic [ref=e653]:
+                        - img [ref=e654]
+                        - heading "Quality & Compliance" [level=3] [ref=e656]
+                    - generic [ref=e657]:
+                        - generic [ref=e661]:
+                            - img [ref=e663]
+                            - heading "Veeva" [level=4] [ref=e665]
+                            - generic [ref=e667]:
+                                - generic [ref=e668]: Proficiency
+                                - generic [ref=e669]: 85%
+                        - generic [ref=e675]:
+                            - img [ref=e677]
+                            - heading "Trackwise" [level=4] [ref=e679]
+                            - generic [ref=e681]:
+                                - generic [ref=e682]: Proficiency
+                                - generic [ref=e683]: 87%
+                - generic [ref=e686]:
+                    - generic [ref=e688]:
+                        - img [ref=e689]
+                        - heading "Project Management" [level=3] [ref=e691]
+                    - generic [ref=e696]:
+                        - img [ref=e698]
+                        - heading "Fieldwire" [level=4] [ref=e700]
+                        - generic [ref=e702]:
+                            - generic [ref=e703]: Proficiency
+                            - generic [ref=e704]: 80%
+                - generic [ref=e707]:
+                    - generic [ref=e709]:
+                        - img [ref=e710]
+                        - heading "Analysis & Laboratory" [level=3] [ref=e712]
+                    - generic [ref=e713]:
+                        - generic [ref=e717]:
+                            - img [ref=e719]
+                            - heading "Statistical Tools" [level=4] [ref=e721]
+                            - generic [ref=e723]:
+                                - generic [ref=e724]: Proficiency
+                                - generic [ref=e725]: 85%
+                        - generic [ref=e731]:
+                            - img [ref=e733]
+                            - heading "Laboratory Equipment" [level=4] [ref=e735]
+                            - generic [ref=e737]:
+                                - generic [ref=e738]: Proficiency
+                                - generic [ref=e739]: 90%
+            - generic [ref=e743]:
+                - heading "Comprehensive Technical Toolkit" [level=3] [ref=e744]
+                - paragraph [ref=e745]: Leveraging industry-standard tools and technologies to deliver precision engineering solutions in biotechnology manufacturing and process optimization.
+                - generic [ref=e746]:
+                    - generic [ref=e747]:
+                        - generic [ref=e748]: 8+
+                        - generic [ref=e749]: Core Tools
+                    - generic [ref=e750]:
+                        - generic [ref=e751]: '4'
+                        - generic [ref=e752]: Categories
+                    - generic [ref=e753]:
+                        - generic [ref=e754]: 90%+
+                        - generic [ref=e755]: Avg Proficiency
+                    - generic [ref=e756]:
+                        - generic [ref=e757]: '8'
+                        - generic [ref=e758]: Years Experience
+        - generic [ref=e760]:
+            - generic [ref=e761]:
+                - heading "LET'S CONNECT" [level=2] [ref=e762]
+                - paragraph [ref=e763]: Ready to collaborate on your next biotech manufacturing challenge? Let's discuss how precision engineering can drive your project forward.
+            - generic [ref=e764]:
+                - img
+                - generic:
+                    - generic: YOU
+                - generic [ref=e765]:
+                    - link "Email" [ref=e767] [cursor=pointer]:
+                        - /url: mailto:harsimranjeetsingh4@gmail.com
+                        - generic:
+                            - img
+                            - generic: Email
+                    - paragraph [ref=e769]: harsimranjeetsingh4@gmail.com
+                - generic [ref=e770]:
+                    - link "LinkedIn" [ref=e772] [cursor=pointer]:
+                        - /url: https://linkedin.com/in/hs10
+                        - generic:
+                            - img
+                            - generic: LinkedIn
+                    - paragraph [ref=e774]: linkedin.com/in/hs10
+                - generic [ref=e775]:
+                    - link "Phone" [ref=e777] [cursor=pointer]:
+                        - /url: tel:5879373631
+                        - generic:
+                            - img
+                            - generic: Phone
+                    - paragraph [ref=e779]: '5879373631'
+            - generic [ref=e783]: Based in Hamilton, ON
+    - contentinfo [ref=e784]:
+        - generic [ref=e789]:
+            - generic [ref=e790]:
+                - generic [ref=e791]:
+                    - generic [ref=e792]:
+                        - heading "Harsimranjeet Singh" [level=3] [ref=e793]
+                        - paragraph [ref=e794]: Manufacturing Sciences & Technology Leader
+                        - paragraph [ref=e795]: Specializing in CAR-T manufacturing, scale-up, and technology transfer with 8+ years of biotech/biopharma experience. Expert in process optimization, regulatory compliance, and leading cross-functional teams to deliver precision-engineered solutions.
+                    - generic [ref=e796]:
+                        - heading "Quick Links" [level=4] [ref=e797]
+                        - navigation [ref=e798]:
+                            - button "Hero" [ref=e799]
+                            - button "Impact Metrics" [ref=e800]
+                            - button "Career Timeline" [ref=e801]
+                            - button "Expertise Matrix" [ref=e802]
+                            - button "Process Flow" [ref=e803]
+                            - button "Skills Radar" [ref=e804]
+                            - button "Current Focus" [ref=e805]
+                            - button "Education" [ref=e806]
+                            - button "Tools" [ref=e807]
+                            - button "Contact" [ref=e808]
+                    - generic [ref=e809]:
+                        - heading "Get In Touch" [level=4] [ref=e810]
+                        - generic [ref=e811]:
+                            - link "harsimranjeetsingh4@gmail.com" [ref=e812] [cursor=pointer]:
+                                - /url: mailto:harsimranjeetsingh4@gmail.com
+                                - img [ref=e813] [cursor=pointer]
+                                - generic [ref=e815] [cursor=pointer]: harsimranjeetsingh4@gmail.com
+                            - link "5879373631" [ref=e816] [cursor=pointer]:
+                                - /url: tel:5879373631
+                                - img [ref=e817] [cursor=pointer]
+                                - generic [ref=e819] [cursor=pointer]: '5879373631'
+                            - generic [ref=e820]:
+                                - img [ref=e821]
+                                - generic [ref=e823]: Hamilton, ON
+                - generic [ref=e825]:
+                    - generic [ref=e826]:
+                        - link "Connect on LinkedIn" [ref=e827] [cursor=pointer]:
+                            - /url: http://www.linkedin.com/in/hs10
+                            - img [ref=e828] [cursor=pointer]
+                        - link "Send Email" [ref=e830] [cursor=pointer]:
+                            - /url: mailto:harsimranjeetsingh4@gmail.com
+                            - img [ref=e831] [cursor=pointer]
+                        - link "Call Phone" [ref=e833] [cursor=pointer]:
+                            - /url: tel:5879373631
+                            - img [ref=e834] [cursor=pointer]
+                    - button "Back to top" [ref=e836]:
+                        - generic [ref=e837]: Back to Top
+                        - img [ref=e838]
+            - generic [ref=e842]:
+                - paragraph [ref=e843]: © 2025 Harsimranjeet Singh. All rights reserved.
+                - paragraph [ref=e844]: DESIGNED & ENGINEERED WITH PRECISION
+```

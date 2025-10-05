@@ -1,0 +1,220 @@
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { render, screen, waitFor } from '../../../test/utils';
+import Hero from '../Hero';
+
+// Mock GSAP more thoroughly for integration tests
+const mockTimeline = {
+  to: vi.fn().mockReturnThis(),
+  from: vi.fn().mockReturnThis(),
+  fromTo: vi.fn().mockReturnThis(),
+  set: vi.fn().mockReturnThis(),
+  add: vi.fn().mockReturnThis(),
+  call: vi.fn().mockReturnThis(),
+  delay: vi.fn().mockReturnThis(),
+  duration: vi.fn().mockReturnThis(),
+  ease: vi.fn().mockReturnThis(),
+  repeat: vi.fn().mockReturnThis(),
+  yoyo: vi.fn().mockReturnThis(),
+  stagger: vi.fn().mockReturnThis(),
+  kill: vi.fn(),
+  progress: vi.fn(),
+  totalProgress: vi.fn(),
+  isActive: vi.fn(() => false),
+  invalidate: vi.fn(),
+  restart: vi.fn(),
+  pause: vi.fn(),
+  resume: vi.fn(),
+  reverse: vi.fn(),
+  seek: vi.fn(),
+  time: vi.fn(),
+  totalTime: vi.fn(),
+};
+
+const mockContext = {
+  revert: vi.fn(),
+};
+
+vi.mock('gsap', () => ({
+  gsap: {
+    context: vi.fn((fn) => {
+      fn();
+      return mockContext;
+    }),
+    set: vi.fn(),
+    to: vi.fn(),
+    timeline: vi.fn(() => mockTimeline),
+    registerPlugin: vi.fn(),
+    getProperty: vi.fn(),
+    quickSetter: vi.fn(),
+    utils: {
+      toArray: vi.fn((target) => Array.isArray(target) ? target : [target]),
+      selector: vi.fn(),
+      random: vi.fn(() => Math.random()),
+    },
+  },
+  ScrollTrigger: {
+    create: vi.fn(),
+    refresh: vi.fn(),
+    update: vi.fn(),
+    kill: vi.fn(),
+    killAll: vi.fn(),
+  },
+}));
+
+describe('Hero Integration Tests', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it('initializes GSAP animations on mount', async () => {
+    const { gsap } = await import('gsap');
+    
+    render(<Hero />);
+
+    await waitFor(() => {
+      expect(gsap.context).toHaveBeenCalled();
+      expect(gsap.timeline).toHaveBeenCalled();
+    });
+  });
+
+  it('creates timeline animations for entrance effects', async () => {
+    render(<Hero />);
+
+    await waitFor(() => {
+      expect(mockTimeline.to).toHaveBeenCalled();
+    });
+
+    // Check that multiple elements are animated
+    const timelineCalls = mockTimeline.to.mock.calls;
+    expect(timelineCalls.length).toBeGreaterThan(0);
+  });
+
+  it('handles animation cleanup on unmount', async () => {
+    const { unmount } = render(<Hero />);
+
+    unmount();
+
+    await waitFor(() => {
+      expect(mockContext.revert).toHaveBeenCalled();
+    });
+  });
+
+  it('renders all hero content elements', () => {
+    render(<Hero />);
+
+    expect(screen.getByText('HARSIMRANJEET SINGH')).toBeInTheDocument();
+    expect(screen.getByText('Manufacturing Sciences & Technology Leader')).toBeInTheDocument();
+    expect(screen.getByText(/Hamilton, ON/)).toBeInTheDocument();
+    expect(screen.getByText(/harsimranjeetsingh4@gmail.com/)).toBeInTheDocument();
+  });
+
+  it('renders expertise nodes with proper content', () => {
+    render(<Hero />);
+
+    expect(screen.getByText('Scale-up Expert')).toBeInTheDocument();
+    expect(screen.getByText('Tech Transfer')).toBeInTheDocument();
+    expect(screen.getByText('Process Engineer')).toBeInTheDocument();
+    expect(screen.getByText('CAR-T')).toBeInTheDocument();
+  });
+
+  it('creates particle animations when complex animations are enabled', async () => {
+    const { gsap } = await import('gsap');
+    
+    render(<Hero />);
+
+    await waitFor(() => {
+      // Should create animations for particles
+      expect(gsap.to).toHaveBeenCalled();
+    });
+  });
+
+  it('handles reduced motion preferences', () => {
+    // Mock reduced motion preference
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockImplementation(query => ({
+        matches: query === '(prefers-reduced-motion: reduce)',
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+      })),
+    });
+
+    render(<Hero />);
+
+    // Content should still render
+    expect(screen.getByText('HARSIMRANJEET SINGH')).toBeInTheDocument();
+  });
+
+  it('creates DNA helix background animation', async () => {
+    const { gsap } = await import('gsap');
+    
+    render(<Hero />);
+
+    await waitFor(() => {
+      // Should create rotation animation for helix
+      const calls = (gsap.to as any).mock.calls;
+      const helixCall = calls.find((call: any) => 
+        call[1] && typeof call[1] === 'object' && 'rotation' in call[1]
+      );
+      expect(helixCall).toBeDefined();
+    });
+  });
+
+  it('handles animation errors gracefully', async () => {
+    // Mock GSAP to throw an error
+    const { gsap } = await import('gsap');
+    vi.mocked(gsap.timeline).mockImplementation(() => {
+      throw new Error('Animation error');
+    });
+
+    // Should not crash
+    expect(() => render(<Hero />)).not.toThrow();
+
+    // Content should still be visible
+    expect(screen.getByText('HARSIMRANJEET SINGH')).toBeInTheDocument();
+  });
+
+  it('creates staggered animations for expertise nodes', async () => {
+    render(<Hero />);
+
+    await waitFor(() => {
+      const staggerCalls = mockTimeline.to.mock.calls.filter(call => 
+        call[1] && typeof call[1] === 'object' && 'stagger' in call[1]
+      );
+      expect(staggerCalls.length).toBeGreaterThan(0);
+    });
+  });
+
+  it('includes scroll indicator component', () => {
+    render(<Hero />);
+
+    // ScrollIndicator should be rendered (check for its typical structure)
+    const heroSection = screen.getByRole('region', { name: /hero/i }) || 
+                       document.querySelector('#hero');
+    expect(heroSection).toBeInTheDocument();
+  });
+
+  it('applies proper CSS classes for styling', () => {
+    render(<Hero />);
+
+    const heroSection = document.querySelector('#hero');
+    expect(heroSection).toHaveClass('min-h-screen');
+    expect(heroSection).toHaveClass('bg-gradient-to-br');
+  });
+
+  it('handles window resize during animations', async () => {
+    render(<Hero />);
+
+    // Simulate window resize
+    window.dispatchEvent(new Event('resize'));
+
+    // Animations should continue to work
+    await waitFor(() => {
+      expect(mockTimeline.to).toHaveBeenCalled();
+    });
+  });
+});

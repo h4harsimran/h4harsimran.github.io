@@ -1,0 +1,165 @@
+import { describe, it, expect, vi } from 'vitest';
+import { render, screen } from './utils';
+// @ts-ignore - jest-axe types may not be fully compatible with vitest
+import { axe, toHaveNoViolations } from 'jest-axe';
+import Hero from '../components/sections/Hero';
+import Navigation from '../components/layout/Navigation';
+import AnimatedCounter from '../components/ui/AnimatedCounter';
+
+// Extend expect with jest-axe matchers
+// @ts-ignore - jest-axe types may not be fully compatible with vitest
+expect.extend(toHaveNoViolations);
+
+describe('Accessibility Tests', () => {
+  it('Hero section should not have accessibility violations', async () => {
+    const { container } = render(<Hero />);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
+  it('Navigation should not have accessibility violations', async () => {
+    const { container } = render(<Navigation />);
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
+  it('AnimatedCounter should not have accessibility violations', async () => {
+    const { container } = render(
+      <AnimatedCounter
+        end={300}
+        label="Equipment Validated"
+        suffix="+"
+        description="Pieces of equipment validated and commissioned"
+      />
+    );
+    const results = await axe(container);
+    expect(results).toHaveNoViolations();
+  });
+
+  it('Hero section has proper heading hierarchy', () => {
+    render(<Hero />);
+    
+    const mainHeading = screen.getByRole('heading', { level: 1 });
+    expect(mainHeading).toHaveTextContent('HARSIMRANJEET SINGH');
+    
+    // Check for proper heading structure
+    const headings = screen.getAllByRole('heading');
+    expect(headings.length).toBeGreaterThan(0);
+  });
+
+  it('Navigation has proper ARIA attributes', () => {
+    render(<Navigation />);
+    
+    const nav = screen.getByRole('navigation');
+    expect(nav).toBeInTheDocument();
+    
+    const menuButton = screen.getByRole('button', { name: /menu/i });
+    expect(menuButton).toHaveAttribute('aria-expanded');
+    expect(menuButton).toHaveAttribute('aria-controls');
+  });
+
+  it('AnimatedCounter has proper semantic structure', () => {
+    render(
+      <AnimatedCounter
+        end={300}
+        label="Equipment Validated"
+        suffix="+"
+        description="Test description"
+      />
+    );
+    
+    const heading = screen.getByRole('heading', { level: 3 });
+    expect(heading).toHaveTextContent('Equipment Validated');
+  });
+
+  it('supports keyboard navigation', () => {
+    render(<Navigation />);
+    
+    const links = screen.getAllByRole('link');
+    links.forEach(link => {
+      expect(link).toHaveAttribute('href');
+    });
+  });
+
+  it('has proper color contrast', () => {
+    render(<Hero />);
+    
+    // Check that text elements exist (actual contrast testing would require more complex setup)
+    const mainHeading = screen.getByText('HARSIMRANJEET SINGH');
+    expect(mainHeading).toBeInTheDocument();
+    
+    const subtitle = screen.getByText('Manufacturing Sciences & Technology Leader');
+    expect(subtitle).toBeInTheDocument();
+  });
+
+  it('provides alternative text for decorative elements', () => {
+    render(<Hero />);
+    
+    // Check that decorative elements don't interfere with screen readers
+    const heroSection = document.querySelector('#hero');
+    expect(heroSection).toBeInTheDocument();
+  });
+
+  it('supports reduced motion preferences', () => {
+    // Mock reduced motion preference
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: vi.fn().mockImplementation(query => ({
+        matches: query === '(prefers-reduced-motion: reduce)',
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+      })),
+    });
+
+    render(<Hero />);
+    
+    // Content should still be accessible
+    expect(screen.getByText('HARSIMRANJEET SINGH')).toBeInTheDocument();
+  });
+
+  it('has proper focus management', () => {
+    render(<Navigation />);
+    
+    const menuButton = screen.getByRole('button', { name: /menu/i });
+    menuButton.focus();
+    expect(menuButton).toHaveFocus();
+  });
+
+  it('provides meaningful link text', () => {
+    render(<Navigation />);
+    
+    const links = screen.getAllByRole('link');
+    links.forEach(link => {
+      const linkText = link.textContent;
+      expect(linkText).toBeTruthy();
+      expect(linkText?.length).toBeGreaterThan(0);
+    });
+  });
+
+  it('has proper landmark regions', () => {
+    render(<Hero />);
+    
+    // Hero should be in a main or section landmark
+    const heroSection = document.querySelector('#hero');
+    expect(heroSection).toBeInTheDocument();
+    expect(heroSection?.tagName.toLowerCase()).toBe('section');
+  });
+
+  it('supports screen reader announcements', () => {
+    render(
+      <AnimatedCounter
+        end={300}
+        label="Equipment Validated"
+        suffix="+"
+        description="Pieces of equipment validated"
+      />
+    );
+    
+    // Check that important information is available to screen readers
+    const label = screen.getByText('Equipment Validated');
+    expect(label).toBeInTheDocument();
+    
+    const description = screen.getByText('Pieces of equipment validated');
+    expect(description).toBeInTheDocument();
+  });
+});
